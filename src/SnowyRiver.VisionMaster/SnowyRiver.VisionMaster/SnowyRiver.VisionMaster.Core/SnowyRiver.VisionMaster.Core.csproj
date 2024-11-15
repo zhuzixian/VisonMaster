@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="MaterialDesignThemes.MahApps" Version="3.1.0" />
+    <PackageReference Include="Prism.Wpf" Version="9.0.537" />
+    <PackageReference Include="SnowyRiver.WPF.MaterialDesignInPrism" Version="9.0.4" />
+  </ItemGroup>
+</Project>

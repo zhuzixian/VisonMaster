@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="NLog.Extensions.Logging" Version="5.3.14" />
+    <PackageReference Include="OpenCvSharp4.Windows" Version="4.10.0.20241108" />
+    <PackageReference Include="OpenCvSharp4.WpfExtensions" Version="4.10.0.20241108" />
+    <PackageReference Include="Prism.DryIoc" Version="9.0.537" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SnowyRiver.VisionMaster.Core\SnowyRiver.VisionMaster.Core.csproj" />
+    <ProjectReference Include="..\Modules\SnowyRiver.VisionMaster.Modules.ModuleName\SnowyRiver.VisionMaster.Modules.ModuleName.csproj" />
+    <ProjectReference Include="..\Services\SnowyRiver.VisionMaster.Services.Interfaces\SnowyRiver.VisionMaster.Services.Interfaces.csproj" />
+    <ProjectReference Include="..\Services\SnowyRiver.VisionMaster.Services\SnowyRiver.VisionMaster.Services.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Configs\NLog.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>

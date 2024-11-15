@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="SnowyRiver.VisionMaster.Modules.ModuleName.Views.SubtractView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <ToolBarTray Grid.Row="0" >
+            <ToolBar Style="{StaticResource MaterialDesignToolBar}">
+                <Button Content="{materialDesign:PackIcon Kind=FileImageAdd}" 
+                        Command="{Binding AddImageCommand}"/>
+                <Button Content="{materialDesign:PackIcon Kind=FileImageRemove}"
+                        Command="{Binding RemoveImageCommand}"/>
+                <Separator />
+                <Button Command="{Binding ExecuteCommand}" Content="{materialDesign:PackIcon Kind=AutoFix}"/>
+                <Separator />
+                <Button Command="{Binding SaveCommand}" Content="{materialDesign:PackIcon Kind=ContentSave}"/>
+            </ToolBar>
+        </ToolBarTray>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <GroupBox Header="输入">
+                <ListBox ItemsSource="{Binding InputImages}" >
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Horizontal">
+                            </StackPanel>
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding ., Converter={StaticResource MatToBitmapSourceConverter}}" Stretch="Uniform"/>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </GroupBox>
+            <GroupBox Grid.Row="1" Header="输出">
+                <Image Source="{Binding OutputImage, Converter={StaticResource MatToBitmapSourceConverter}}"/>
+            </GroupBox>
+        </Grid>
+    </Grid>
+</UserControl>

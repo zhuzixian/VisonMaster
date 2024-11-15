@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="OpenCvSharp4" Version="4.10.0.20241108" />
+    <PackageReference Include="Prism.Wpf" Version="9.0.537" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\SnowyRiver.VisionMaster.Core\SnowyRiver.VisionMaster.Core.csproj" />
+    <ProjectReference Include="..\..\Services\SnowyRiver.VisionMaster.Services.Interfaces\SnowyRiver.VisionMaster.Services.Interfaces.csproj" />
+  </ItemGroup>
+</Project>

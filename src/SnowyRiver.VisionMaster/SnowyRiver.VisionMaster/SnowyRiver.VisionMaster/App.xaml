@@ -1,0 +1,30 @@
+﻿<materialDesignInPrism:SnowyRiverApplication x:Class="SnowyRiver.VisionMaster.App"
+                             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                             xmlns:local="clr-namespace:SnowyRiver.VisionMaster"
+                             xmlns:prism="http://prismlibrary.com/"
+                             xmlns:materialDesignInPrism="clr-namespace:SnowyRiver.WPF.MaterialDesignInPrism;assembly=SnowyRiver.WPF.MaterialDesignInPrism"
+                             xmlns:materialDesignMahApps="http://materialdesigninxaml.net/winfx/xaml/themes"
+                             xmlns:converters="clr-namespace:SnowyRiver.VisionMaster.Converters">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <materialDesignMahApps:MahAppsBundledTheme BaseTheme="Light"
+                                                           PrimaryColor="Indigo"
+                                                           SecondaryColor="Indigo" />
+
+                <!-- MahApps -->
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
+
+                <!-- Material Design -->
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesign3.Defaults.xaml" />
+
+                <!-- Material Design: MahApps Compatibility -->
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.MahApps;component/Themes/MaterialDesignTheme.MahApps.Defaults.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        
+            <converters:MatToBitmapSourceConverter x:Key="MatToBitmapSourceConverter"/>
+        </ResourceDictionary>
+    </Application.Resources>
+</materialDesignInPrism:SnowyRiverApplication>
