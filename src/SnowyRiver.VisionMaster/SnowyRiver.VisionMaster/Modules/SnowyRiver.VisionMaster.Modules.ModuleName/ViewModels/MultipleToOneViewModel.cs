@@ -19,7 +19,7 @@ public class MultipleToOneViewModel(IRegionManager regionManager) : RegionViewMo
         };
         if (openFileDialog.ShowDialog() == true)
         {
-            var image = new Mat(openFileDialog.FileName);
+            var image = new Mat(openFileDialog.FileName, ImreadModes.Grayscale);
             InputImages.Add(image);
         }
     }

@@ -18,5 +18,6 @@ public class ModuleNameModule(IRegionManager regionManager) : IModule
     {
         containerRegistry.RegisterForNavigation<SubtractView>(ViewNames.SubtractView);
         containerRegistry.RegisterForNavigation<AbsdiffView>(ViewNames.AbsdiffView);
+        containerRegistry.RegisterForNavigation<RollingBallView>(ViewNames.RollingBallView);
     }
 }

@@ -8,7 +8,11 @@
     <PackageReference Include="Prism.Wpf" Version="9.0.537" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Services\SnowyRiver.VisionMaster.Services\SnowyRiver.VisionMaster.Services.csproj" />
     <ProjectReference Include="..\..\SnowyRiver.VisionMaster.Core\SnowyRiver.VisionMaster.Core.csproj" />
     <ProjectReference Include="..\..\Services\SnowyRiver.VisionMaster.Services.Interfaces\SnowyRiver.VisionMaster.Services.Interfaces.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Services\" />
   </ItemGroup>
 </Project>
